@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@700&family=Mochiy+Pop+P+One&family=Righteous&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Fashion Driven</title>
 </head>
 <body>
@@ -18,19 +21,19 @@
                 <h1>Escolha o modelo</h1>
                 <div class="all-items">
                     <div class="item">
-                        <div class="item-image">
+                        <div class="item-image item-model" onclick="chooseModel(this, 'model', 'tshirt')">
                             <img src="images/tshirt.png" alt="camisa">
                         </div>
                         <h1>T-shirt</h1>
                     </div>
                     <div class="item">
-                        <div class="item-image">
+                        <div class="item-image item-model" onclick="chooseModel(this, 'model','camiseta')">
                             <img src="images/Camiseta.png" alt="camisa">
                         </div>
                         <h1>camiseta</h1>
                     </div>
                     <div class="item">
-                        <div class="item-image">
+                        <div class="item-image item-model" onclick="chooseModel(this, 'model','manga longa')">
                             <img src="images/Mangalonga.png" alt="camisa">
                         </div>
                         <h1>Manga longa</h1>
@@ -41,19 +44,19 @@
                 <h1>Escolha a gola</h1>
                 <div class="all-items">
                     <div class="item">
-                        <div class="item-image">
+                        <div class="item-image  item-collar"  onclick="chooseModel(this, 'collar','gola-V')">
                             <img src="images/GolaV.png" alt="camisa">
                         </div>
                         <h1>gola-V</h1>
                     </div>
                     <div class="item">
-                        <div class="item-image">
+                        <div class="item-image item-collar"  onclick="chooseModel(this, 'collar', 'gola redonda')">
                             <img src="images/GolaRedonda.png" alt="camisa">
                         </div>
                         <h1>Gola Redonda</h1>
                     </div>
                     <div class="item">
-                        <div class="item-image">
+                        <div class="item-image item-collar"  onclick="chooseModel(this, 'collar','gola-polo')">
                             <img src="images/GolaPolo.png" alt="camisa">
                         </div>
                         <h1>Gola Polo</h1>
@@ -64,31 +67,33 @@
                 <h1>Escolha o tecido</h1>
                 <div class="all-items">
                     <div class="item">
-                        <div class="item-image">
+                        <div class="item-image item-fabric" onclick="chooseModel(this, 'fabric','seda')">
                             <img src="images/Seda.png" alt="camisa">
                         </div>
-                        <h1>texto</h1>
+                        <h1>Seda</h1>
                     </div>
                     <div class="item">
-                        <div class="item-image">
+                        <div class="item-image item-fabric" onclick="chooseModel(this, 'fabric','algodão')">
                             <img src="images/Algodão.png" alt="camisa">
                         </div>
-                        <h1>texto</h1>
+                        <h1>Algodão</h1>
                     </div>
                     <div class="item">
-                        <div class="item-image">
+                        <div class="item-image item-fabric" onclick="chooseModel(this, 'fabric','poliester')">
                             <img src="images/Poliester.png" alt="camisa">
                         </div>
-                        <h1>texto</h1>
+                        <h1>Poliester</h1>
                     </div>
                 </div>
             </div>
-            <form>
-                <label for="link-input">Imagem de referência</label>
-                <input type="text" placeholder="insira o link">
-            </form>
-            <button>Confirmar pedido</button>
+            <div class="form">
+                <label for="link-input"><h1>Imagem de referência</h1></label>
+                <input type="text" placeholder="insira o link" class="link-clothes">
+
+                <button onclick="clickButton()">Confirmar pedido</button>
+            </div>
         </section>
+
         <section class="image-section">
             <img src="images/ilustração.png">
         </section>
@@ -99,5 +104,6 @@
             <div class="order-image"></div>
         </div>
     </footer>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
