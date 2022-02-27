@@ -88,7 +88,7 @@
             </div>
             <div class="form">
                 <label for="link-input"><h1>Imagem de referência</h1></label>
-                <input type="text" placeholder="insira o link" class="link-clothes">
+                <input type="text" placeholder="insira o link" class="link-clothes" onkeyup= "chooseModel(this, 'link')">
 
                 <button onclick="clickButton()">Confirmar pedido</button>
             </div>
@@ -99,11 +99,11 @@
         </section>
     </main>
     <footer>
-        <h2>Ultimos pedidos</h2>
+        <h1>Ultimos pedidos</h1>
         <div class="orders">
-            <div class="order-image"></div>
         </div>
     </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>

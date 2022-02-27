@@ -8,6 +8,7 @@ let boolean_collar = false;
 let boolean_fabric = false;
 let put_link = false;
 
+
 link_clothes.value = "";
 
 function chooseModel(classe, type, chooice){
@@ -41,7 +42,7 @@ function chooseModel(classe, type, chooice){
         put_link = true;
     }
 
-    if(boolean_model && boolean_collar && boolean_fabric){
+    if(boolean_model && boolean_collar && boolean_fabric && put_link){
         button.disabled = false;
     }
     console.log('model', boolean_model)
@@ -55,3 +56,36 @@ function clickButton(){
         alert("coloque o link para concluir o seu pedido")
     }
 }
+
+function takeData(){
+    let promise = axios.get("https://mock-api.driven.com.br/api/v4/shirts-api/shirts");
+
+    promise.then(putElementsOnScreen)
+
+    promise.catch((err) => {
+        console.error(err.status, err.message);
+    })
+
+}
+
+function putElementsOnScreen(element){
+    let shirt_list = element.data;
+    let orders = document.querySelector(".orders");
+
+    for(let i = 9; i >= 0; i--){
+        orders.innerHTML = orders.innerHTML + `
+            <div class="shirt-image">
+                <img src="${shirt_list[i].image}" alt="imagem da camisa">
+                <div class="text">
+                    <h1>Criador:</h1>
+                    <p> ${shirt_list[i].owner}</p>
+                </div>
+            </div>
+        `
+    }
+}
+
+
+takeData();
+
+

@@ -12,7 +12,6 @@ main{
     background-color: #FCFCFC;
     display: flex;
     justify-content: space-between;
-    margin: 40px 0;
 }
 section{
     width: 50%;
@@ -73,7 +72,6 @@ section{
 .form h1{
     font-family: 'Roboto';
     font-size: 18px;
-    margin: 10px 0 ;
 }
 .link-clothes{
     width: 60%;
@@ -97,6 +95,50 @@ button{
     border: 2px solid #404EED;
 }
 
+footer{
+    width: 100%;
+    height: 340px;
+    background-color: #F2F2F2;
+    display: flex;
+    align-items: center;
+}
+footer h1{
+    font-family: 'Roboto';
+    font-size: 18px;
+    padding: 20px 0;
+    margin-left: 10%;
+}
+.orders{
+    width: 80%;
+    height: 270px;
+    margin:auto;
+    display: flex;
+    overflow-y: hidden;
+}
+
+.shirt-image{
+    width: 200px;
+    height: 240px;
+    margin: 0 15px;
+    background-color: white;
+    padding: 10px;
+}   
+.shirt-image img{
+    width: 180px;
+    height: 180px;
+}
+.shirt-image h1{
+    font-weight: bold;
+}
+.shirt-image p{
+    font-family: 'Roboto';
+    font-size: 18px;
+    margin: 0 4px;
+}
+.text{
+    display: flex;
+    align-items: center;
+}
 
 
 
