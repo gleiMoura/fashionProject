@@ -88,7 +88,7 @@ function putElementsOnScreen(element){
 
     for(let i = 0; i < shirt_list.length; i++){
         orders_in_footer.innerHTML = orders_in_footer.innerHTML + `
-            <div class="shirt-image" onclick = "sendOrderFromFooter(${shirt_list[i].id})">
+            <div class="shirt-image" onclick="sendOrderFromFooter(${shirt_list[i].id})">
                 <img src="${shirt_list[i].image}" alt="imagem da camisa">
                 <div class="text">
                     <h1>Criador:</h1>
@@ -104,6 +104,7 @@ function sendOrder(){
 
     promise.then((answer) =>{
         console.log(answer.data)
+        takeData()
     })
     promise.catch((err)=>{
         console.error(err.status, err.message)
@@ -126,16 +127,23 @@ function sendOrderFromFooter(identifier){
         "author": person_name
     }
 
-    console.log(order_object)
-    console.log(order_from_footer)
-    console.log(identifier)
-    console.log(shirt_list)
     let question = confirm("você deseja enviar este pedido?")
     if(question){
         sendOrder();
     }
 }
 
-setInterval(takeData, 3000)
+function checkNewOrder(){
+    let new_order = document.querySelector('shirt-image new')
+
+    if(new_order !== null){
+        console.log("deu bom")
+        new_order.classList.remove('new')
+    }
+    
+}
+
+takeData();
+
 
 
